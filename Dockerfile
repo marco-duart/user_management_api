@@ -34,9 +34,11 @@ RUN bundle exec bootsnap precompile app/ lib/
 FROM base
 
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl \
+    apt-get install --no-install-recommends -y \
+    curl \
     libvips \
-    libpq-dev && \ 
+    libpq-dev \
+    redis-server && \
     rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /usr/local/bundle /usr/local/bundle
@@ -46,8 +48,7 @@ RUN useradd rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
 USER rails:rails
 
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+CMD service redis-server start && \
+    ./bin/rails server -b '0.0.0.0'
 
 EXPOSE 3000
-
-CMD ["./bin/rails", "server", "-b", "0.0.0.0"]
