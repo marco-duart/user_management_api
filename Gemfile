@@ -24,11 +24,12 @@ gem 'rack-cors'
 
 gem 'cpf_cnpj'
 
+gem 'faker'
+
 group :development, :test do
   gem 'database_cleaner-active_record'
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'rspec-rails'
 end
 
