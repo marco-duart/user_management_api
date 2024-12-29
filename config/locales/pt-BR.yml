@@ -4,7 +4,6 @@ pt-BR:
       deleted_successfully: "Usuário e endereços associados excluídos com sucesso"
     errors:
       not_found: "Usuário não encontrado"
-      no_users_found: "Nenhum usuário encontrado"
   general:
     errors:
       server_error: "Algo deu errado. Por favor, tente novamente mais tarde."
