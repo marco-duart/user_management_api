@@ -22,6 +22,8 @@ gem 'ransack'
 
 gem 'rack-cors'
 
+gem 'cpf_cnpj'
+
 group :development, :test do
   gem 'database_cleaner-active_record'
   gem 'debug', platforms: %i[mri windows]
