@@ -2,8 +2,12 @@ pt-BR:
   user:
     messages:
       deleted_successfully: "Usuário e endereços associados excluídos com sucesso"
+      check_email: "E-mail disponível"
+      check_cpf: "CPF disponível"
     errors:
       not_found: "Usuário não encontrado"
+      check_email: "E-mail já está em uso"
+      check_cpf: "CPF já está em uso"
   general:
     errors:
       server_error: "Algo deu errado. Por favor, tente novamente mais tarde."

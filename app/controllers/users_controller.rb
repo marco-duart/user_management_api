@@ -54,6 +54,22 @@ class UsersController < ApplicationController
     render json: { message: I18n.t('user.messages.deleted_successfully') }, status: :ok
   end
 
+  def check_email
+    if User.exists?(email: params[:email])
+      render json: { message: I18n.t('user.errors.check_email') }, status: :unprocessable_entity
+    else
+      render json: { message: I18n.t('user.messages.check_email') }, status: :ok
+    end
+  end
+
+  def check_cpf
+    if User.exists?(cpf: params[:cpf])
+      render json: { message: I18n.t('user.errors.check_cpf') }, status: :unprocessable_entity
+    else
+      render json: { message: I18n.t('user.messages.check_cpf') }, status: :ok
+    end
+  end
+
   private
 
   def set_user
@@ -62,7 +78,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :cpf, :birthday,
-                                 addresses_attributes: %i[id street number neighborhood city state country zip_code _destroy])
+                                 addresses_attributes: %i[id street number complement neighborhood city state country zip_code _destroy])
   end
 
   def filter_params
