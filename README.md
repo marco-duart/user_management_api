@@ -26,7 +26,7 @@ Cadastro, edição, exclusão, visualização de detalhes de usuários e seus en
 | `GET`     | `/users`                 | Lista todos os usuários com seus endereços      |
 | `POST`    | `/users`                 | Cria um novo usuário com endereços              |
 | `GET`     | `/users/:id`             | Exibe detalhes de um usuário                    |
-| `PUT`     | `/users/:id`             | Atualiza um usuário                             |
+| `PATCH`   | `/users/:id`             | Atualiza um usuário                             |
 | `DELETE`  | `/users/:id`             | Exclui um usuário                               |
 | `GET`     | `/users/check_email`     | Verifica se o email é unico                     |
 | `GET`     | `/users/check_cpf`       | Verifica se o CPF é unico                       |
