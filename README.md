@@ -71,8 +71,8 @@ Cadastro, edição, exclusão, visualização de detalhes de usuários e seus en
    DATABASE_PASSWORD=postgres # Padrão
    DATABASE_PORT=5432 # Padrão
    RAILS_MAX_THREADS=5 # Padrão
-   DATABASE_NAME=user_management_production
-   RAILS_ENV=production
+   DATABASE_NAME=user_management_development
+   RAILS_ENV=development
    REDIS_URL=redis://localhost:6379/0
    ```
 
